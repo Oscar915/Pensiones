@@ -1,0 +1,205 @@
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo2">
+            LODGING <i class='bx bxs-home-alt-2'></i>
+        </a>
+
+        <div class="nav__menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link active-link" style="cursor: pointer;">
+                        <i class='bx bx-home-alt-2'></i>
+                        <span>Perfil </span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" style="cursor: pointer;">
+                        <i class='bx bx-home-alt-2'></i>
+                        <span>Mis reservas </span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link " style="cursor: pointer;">
+                        <i class='bx bx-building-house'></i>
+                        <span>Alojamientos</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Theme change button -->
+        <i class='bx bx-moon change-theme' id="theme-button"></i>
+        <div> HOLA,&nbsp;Oscar </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="nav__button button">Cerrar sesión</a>
+    </nav>
+</header>
+
+<!--==================== HOME ====================-->
+
+<div class="home__container container grid">
+</div>
+<div class="container">
+
+    <h4>Información del estudiantes</h4>
+    <div class="row">
+        <div class="col-4">
+            <img src="data:image/jpeg;base64,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"
+                alt="" srcset="">
+        </div>
+
+        <div class="col">
+            <form>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" value="Esnaider">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Apellido</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" value="Guzmán">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Dirección</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" value="Calle 12 #45-34">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" value="Esnai@correo.com" disabled>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!--==================== FOOTER ====================-->
+<footer class="footer section">
+    <div class="footer__container container grid">
+        <div>
+            <a href="" class="footer__logo">
+                LodGing <i class='bx bxs-home-alt-2'></i>
+            </a>
+            <p class="footer__description">
+                Nuestra visión es hacer que todas <br>
+                las personas encuentren el mejor <br>
+                lugar de residencia para ellos.
+            </p>
+        </div>
+
+        <div class="footer__content">
+            <div>
+                <h3 class="footer__title">
+                    Acerca de
+                </h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Sobre nosotros</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Características</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Noticias y Blogs</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">
+                    Compañía
+                </h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">¿Cómo trabajamos?</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Capital</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Seguridad</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">
+                    Soporte
+                </h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Preguntas frecuentes</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Centro de apoyo</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Contacta con nosotros</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">
+                    Redes Sociales
+                </h3>
+
+                <ul class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                    <a href="https://www.twitter.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__info container">
+        <span class="footer__copy">
+            &#169; LodGing. Todos los derechos reservados
+        </span>
+
+        <div class="footer__privacy">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Política de privacidad</a>
+        </div>
+    </div>
+</footer>
