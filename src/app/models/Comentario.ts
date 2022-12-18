@@ -1,6 +1,6 @@
 export interface  Comentario{
-    idComentario: number 
-    users_Email: string 
-    habitacion_idHabitacion: string 
-    texto: string
+    Id:number;
+    Id_reserva:number;
+    Id_habitacion:number;
+    Contenido:number;
 }

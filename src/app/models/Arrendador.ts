@@ -1,6 +1,10 @@
 export interface Arrendador{
-    identificacion : string,
-    nombre : string,
-    ciudad : string,
-    departamento : string,
+    Id:number;
+    Nombres:string;
+    Apellidos:string;
+    Contraseña:string;
+    Correo:string;
+    Permiso:string;
+    Estado:string;
+
 }

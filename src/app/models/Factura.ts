@@ -1,17 +1,6 @@
-export class  Factura{
-    nitFactura?: string;
-    users_Email:string;
-    Descripcion:string;
-    ValorTotal:number ;
+export interface Factura{
+    Id:number;
+    Id_reserva:number;
+    Valor_total:number;
 
-    constructor(
-        users_Email : string,
-        Descripcion: string,
-        ValorTotal : number){
-        
-            this.users_Email = users_Email;
-            this.Descripcion = Descripcion;
-            this.ValorTotal = ValorTotal;
-
-    }
 }

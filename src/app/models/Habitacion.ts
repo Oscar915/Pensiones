@@ -1,11 +1,12 @@
 export interface  Habitacion{
-    idHabitacion: number; 
-    Nombre_Habitacion: string;
-    EstadoHabi: string;
-    Descripcion: string;
-    Precio: number;
-    Departamento: string;
-    Ciudad: string;
-    Direccion: string;
-    Imagen: string;
+    Id:string;
+    Nombres:string;
+    Disponibilidad:string;
+    Descripcion:string;
+    Precio:number,
+    Departamento:string;
+    Ciudad:string;
+    Direccion:string;
+    Id_administrador:number;
+    
 }

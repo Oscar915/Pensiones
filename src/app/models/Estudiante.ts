@@ -1,7 +1,11 @@
 export interface Estudiante{
-    identificacion : string,
-    nombre : string,
-    ciudad : string,
-    departamento : string,
-    direccion : string,
+    Id:number;
+    Nombres: string;
+    Apellidos:string;
+    Contraseña:string;
+    Correo:string;
+    Carnet:string;
+    Estado:string;
 }
+
+
