@@ -65,11 +65,11 @@ public activarArrendador(Id:number):Observable<any>{
 public setHabitacion(Habitacion:Habitacion):Observable<any>{
   return this._HttpClient.post('http://localhost:3000/api/habitacion/' , Habitacion);
 }
-
+/****************************************************************************************/
 public traerReservas():Observable<any>{
   return this._HttpClient.get('http://localhost:3000/api/reserva');
 }
-
+/****************************************************************************************/
 public getHabitacionesLibres():Observable<any>{
   return this._HttpClient.get('http://localhost:3000/api/habilibres');
 }
