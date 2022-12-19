@@ -23,12 +23,19 @@ export class AdminHomeComponent implements OnInit {
   ngOnInit(): void {
     this.activarSection(2)
     this.traerArrendadores();
+    this.traerReservas();
   }
 
   traerArrendadores() {
     this.dataService.getArrendador().subscribe(resp => {
       this.Arrendadores = resp;
+      
+    })
+  }
 
+  traerReservas() {
+    this.dataService.getArrendador().subscribe(resp => {
+      this.reservas = resp;
     })
   }
 

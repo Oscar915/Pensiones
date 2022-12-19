@@ -60,5 +60,11 @@ public activarArrendador(Id:number):Observable<any>{
   return this._HttpClient.put('http://localhost:3000/api/activararrendador',{Id});
 }
 
+public traerReservas():Observable<any>{
+  return this._HttpClient.get('http://localhost:3000/api/reserva');
+}
+
+
+
 }
 
