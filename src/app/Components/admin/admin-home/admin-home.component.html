@@ -1,0 +1,142 @@
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo2">
+            LODGING <i class='bx bxs-home-alt-2'></i>
+        </a>
+
+        <div class="nav__menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link " style="cursor: pointer;">
+                        <i  class='bx bx-home-alt-2'></i>
+                        <span (click)="activarSection(1)">Habitaciones </span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link " style="cursor: pointer;">
+                        <i  class='bx bx-home-alt-2'></i>
+                        <span (click)="activarSection(2)">Arrendadores</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link " style="cursor: pointer;">
+                        <i class='bx bx-building-house'></i>
+                        <span (click)="activarSection(3)">Reservas</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Theme change button -->
+        <i class='bx bx-moon change-theme' id="theme-button"></i>
+        <div> HOLA,&nbsp;Admin </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="nav__button button">Cerrar sesión</a>
+    </nav>
+</header>
+
+<!--==================== HOME ====================-->
+
+<div class="home__container container grid">
+</div>
+<div class="container">
+
+    <!-- SECCION DE HABITACIONES-->
+    <section *ngIf="hab">
+        <h4>Habitaciones registradas</h4>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Disponibilidad</th>
+                <th scope="col">Departamento</th>
+                <th scope="col">Ciudad</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Adminitrador</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mi casa</td>
+                <td>Libre</td>
+                <td>Córdoba</td>
+                <td>Lorica</td>
+                <td>Calle 45</td>
+                <td>Esnaider</td>
+              </tr>
+             
+             
+            </tbody>
+          </table>
+    </section>
+    
+    
+
+    <!-- SECCION DE ARRENDADORES-->
+    <section *ngIf="arr">
+        <h4>Arrendadores registrados</h4>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Identificación</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Cambiar estado</th>
+              </tr>
+            </thead>
+            <tbody *ngFor=" let arrendador of Arrendadores " >
+              <tr  >
+                <td>{{arrendador.Id}}</td>
+                <td>{{arrendador.Nombres}}</td>
+                <td>{{arrendador.Apellidos}}</td>
+                <td>{{arrendador.Estado}}</td>
+                <td>
+                    <button *ngIf="arrendador.Estado=='Activo'"  (click)="desactivar(arrendador.Id!)" class="btn btn-danger" >Desactivar</button>
+                    <button *ngIf="arrendador.Estado!='Activo'" (click)="activar(arrendador.Id!)" class="btn btn-success" >Activar</button>
+                </td>
+              </tr>
+            
+            </tbody>
+          </table>
+    </section>
+
+
+    <!-- SECCION DE RESERVAS-->
+    <section *ngIf="res">
+        <h4>Estudiantes registrados</h4>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Identificación</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Cambiar estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1452365</td>
+                <td>Esnaider</td>
+                <td>Guzman</td>
+                <td>Activo</td>
+                <td>
+                    <button  class="btn btn-danger" >Desactivar</button>
+                    <button class="btn btn-success" >Activar</button>
+                </td>
+              </tr>
+            
+            </tbody>
+          </table>
+    </section>
+
+</div>
+
+
+
+
+
+
+
+
