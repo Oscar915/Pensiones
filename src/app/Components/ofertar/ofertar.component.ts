@@ -24,7 +24,9 @@ export class OfertarComponent implements OnInit {
   ngOnInit(): void {
     this._DataService.getHabitaciones()
     .subscribe(
-      Resp => this.Habitaciones = Resp,
+      Resp => {this.Habitaciones = Resp,
+      console.log(Resp);
+    },
       Err => console.log(Err))
 
 

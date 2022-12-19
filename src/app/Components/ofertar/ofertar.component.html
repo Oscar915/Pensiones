@@ -128,12 +128,12 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                <tr>
-                    <td>Habitación compartida</td>
-                    <td>Córdoba</td>
-                    <td>Lorica</td>
-                    <td>Calle 17b #15b -28</td>
-                    <td>Libre</td>
+                <tr *ngFor="let Elem of Habitaciones">
+                    <td>{{Elem.Nombres}}</td>
+                    <td>{{Elem.Departamento}}</td>
+                    <td>{{Elem.Ciudad}}</td>
+                    <td>{{Elem.Direccion}}</td>
+                    <td>{{Elem.Disponibilidad}}</td>
                     <td><button class="btn btn-primary">Editar</button></td>
                     <td><button class="btn btn-danger">Eliminar</button></td>
                 </tr>
