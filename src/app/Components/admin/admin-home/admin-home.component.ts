@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Arrendador } from 'src/app/models/Arrendador';
+import { Reserva } from 'src/app/models/Reserva';
 import { DataService } from 'src/app/Services/data.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class AdminHomeComponent implements OnInit {
   res: boolean = false;
 
   Arrendadores: Arrendador[] = [];
+  reservas: Reserva[] = [];
 
 
   constructor(private dataService: DataService) { }
@@ -21,12 +23,19 @@ export class AdminHomeComponent implements OnInit {
   ngOnInit(): void {
     this.activarSection(2)
     this.traerArrendadores();
+    this.traerReservas();
   }
 
   traerArrendadores() {
     this.dataService.getArrendador().subscribe(resp => {
       this.Arrendadores = resp;
+      
+    })
+  }
 
+  traerReservas() {
+    this.dataService.getArrendador().subscribe(resp => {
+      this.reservas = resp;
     })
   }
 
@@ -41,9 +50,7 @@ export class AdminHomeComponent implements OnInit {
     })
   }
 
-  ngDoCheck(){
-  }
-
+ 
 
   activarSection(opcion: number) {
     switch (opcion) {
