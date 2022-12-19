@@ -70,7 +70,9 @@ export class OfertarComponent implements OnInit {
 
     this._DataService.setHabitacion(Habitacion)
     .subscribe( 
-    Resp => {alert(Resp)},
+    Resp => {alert(Resp)
+    this.Habitaciones.push(Habitacion)
+  },
     Err => console.log(Err))
 
     this.HabitacionForm.reset()
