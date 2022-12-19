@@ -52,5 +52,13 @@ public getHabitaciones():Observable<any>{
   return this._HttpClient.get('http://localhost:3000/api/estudiante');
 }
 /************************************************************************************************* */
+public desactivarArrendador(Id:number):Observable<any>{
+  return this._HttpClient.put('http://localhost:3000/api/desactivararrendador',{Id});
+}
+
+public activarArrendador(Id:number):Observable<any>{
+  return this._HttpClient.put('http://localhost:3000/api/activararrendador',{Id});
+}
+
 }
 

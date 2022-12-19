@@ -23,22 +23,26 @@ export class AdminHomeComponent implements OnInit {
     this.traerArrendadores();
   }
 
-  traerArrendadores(){
-    this.dataService.getArrendador().subscribe(resp=>{
-      this.Arrendadores=resp;
-      console.log(resp);
-      
+  traerArrendadores() {
+    this.dataService.getArrendador().subscribe(resp => {
+      this.Arrendadores = resp;
+
     })
   }
 
-  desactivar(Id: number){
+   desactivar(Id: number) {
+    this.dataService.desactivarArrendador(Id).subscribe(resp => {
+    })
 
   }
 
-  activar(Id: number){
-
+    activar(Id: number) {
+    this.dataService.activarArrendador(Id).subscribe(resp => {
+    })
   }
 
+  ngDoCheck(){
+  }
 
 
   activarSection(opcion: number) {
