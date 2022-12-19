@@ -1,5 +1,5 @@
 export interface Arrendador{
-    Id:number;
+    Id?:number;
     Nombres:string;
     Apellidos:string;
     Contraseña:string;

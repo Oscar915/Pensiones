@@ -1,5 +1,5 @@
 export interface Estudiante{
-    Id:string;
+    Id?:string;
     Nombres: string;
     Apellidos:string;
     Contraseña:string;
