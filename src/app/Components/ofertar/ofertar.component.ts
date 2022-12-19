@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Habitacion } from 'src/app/models/Habitacion';
+import { DataService } from 'src/app/Services/data.service';
 
 
 @Component({
@@ -10,13 +12,21 @@ import { Router } from '@angular/router';
 export class OfertarComponent implements OnInit {
     
   Nombre:string;
-  constructor(private _Router:Router) {
+
+  Habitaciones:Habitacion[];
+  constructor(private _Router:Router, private _DataService:DataService) {
 
     this.Nombre = ""+sessionStorage.getItem('Nombre')
+    this.Habitaciones=[]
 
      }
 
   ngOnInit(): void {
+    this._DataService.getHabitaciones()
+    .subscribe(
+      Resp => this.Habitaciones = Resp,
+      Err => console.log(Err))
+
 
   }
 

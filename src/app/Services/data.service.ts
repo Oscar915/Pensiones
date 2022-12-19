@@ -47,5 +47,10 @@ public SetEstudiante(Estudiante:Estudiante){
   
 }
 /************************************************************************************************* */
+
+public getHabitaciones():Observable<any>{
+  return this._HttpClient.get('http://localhost:3000/api/estudiante');
+}
+/************************************************************************************************* */
 }
 
