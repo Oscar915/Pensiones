@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -7,12 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ofertar.component.scss']
 })
 export class OfertarComponent implements OnInit {
+    
+  Nombre:string;
+  constructor(private _Router:Router) {
 
-  constructor() {
+    this.Nombre = ""+sessionStorage.getItem('Nombre')
 
      }
 
   ngOnInit(): void {
+
+  }
+
+  Salir(){
+  sessionStorage.clear()
+  this._Router.navigate(["Login"])
   }
   
 

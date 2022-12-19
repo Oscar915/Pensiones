@@ -61,23 +61,25 @@ export class LoginComponent implements OnInit {
           console.log('Arrendador');
           alert('Bienvenido: ' +  Elem.Nombres);
           alert('Rol: ' + 'Arrendador');
-          this._Router.navigate(["Ofertar"])
           sessionStorage.setItem('User' , Elem.Correo)
           sessionStorage.setItem('Pass' , Elem.Contraseña)
           sessionStorage.setItem('Nombre' , Elem.Nombres)
+          this._Router.navigate(["Ofertar"])
         }
       })
 
-    } else if(this.Estudantes){
+    } 
+    
+    if(this.Estudantes){
       this.Estudantes.forEach(Elem2 =>{
         if(UserForm.user == Elem2.Correo && UserForm.password == Elem2.Contraseña){
           console.log('Estudiante');
           alert('Bienvenido: ' +  Elem2.Nombres);
           alert('Rol: ' + 'Estudiante');
+          sessionStorage.setItem('User' , Elem2.Correo)
+          sessionStorage.setItem('Pass' , Elem2.Contraseña)
+          sessionStorage.setItem('Nombre' , Elem2.Nombres)
           this._Router.navigate(["Alojamiento"])
-        sessionStorage.setItem('User' , Elem2.Correo)
-        sessionStorage.setItem('Pass' , Elem2.Contraseña)
-        sessionStorage.setItem('Nombre' , Elem2.Nombres)
           
         }
       })

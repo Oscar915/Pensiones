@@ -9,9 +9,9 @@
                 <p class="home__description">
                     
                 </p>
-                <form > 
+                <form [formGroup]="RegistroForm" (ngSubmit)="Ejecutar()"> 
 
-                        <input class="form-control mt-2" type="text" name="Nombre" placeholder="Primer Nombre"   formControlName="Nombre">
+                        <input class="form-control mt-2" type="text" name="Nombre" placeholder="Primer Nombre"   formControlName="Nombre1">
                         
                         <input class="form-control mt-2" type="text" name="Nombre2" placeholder="Segundo Nombre"  formControlName="Nombre2">
 
@@ -26,14 +26,14 @@
                         <label for="lang">Qué eres?</label>
                         <select class="form-control mt-2" name="Rol" id="Rol" formControlName="Rol">
                                 <option value="Estudiante">Estudiante</option>
-                                <option value="Arrendatario">Arrendatario</option>
+                                <option value="Arrendador">Arrendador</option>
                              </select>
                     <br><br><br>
                   <button type="submit" class="button">
                         R E G I S T R A R
                     </button>
                     &nbsp;
-                    <button  class="button">
+                    <button  class="button" (click)="IniciarSession()">
                         Iniciar Sesion 
                     </button>
 
@@ -49,4 +49,5 @@
                 </div>
             </div>
         </div>
+        <br>
     </section>
