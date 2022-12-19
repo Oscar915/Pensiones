@@ -15,16 +15,16 @@ export class OfertarComponent implements OnInit {
   Nombre:string;
 
   HabitacionForm:FormGroup;
-
-
-
   Habitaciones:Habitacion[];
+
+  HabilitarAct:Boolean
   constructor(private _Router:Router, 
     private _DataService:DataService,  
     private _formBuilder: FormBuilder) {
 
     this.Nombre = ""+sessionStorage.getItem('Nombre')
     this.Habitaciones=[]
+    this.HabilitarAct = false
 
     this.HabitacionForm = this._formBuilder.group({
       Nombre: ['', Validators.required],
@@ -84,6 +84,26 @@ export class OfertarComponent implements OnInit {
   this._Router.navigate(["Login"])
   }
   
+
+  Editar(i:number){
+    this.HabitacionForm.controls['Nombre'].setValue(this.Habitaciones[i].Nombres)
+    this.HabitacionForm.controls['Departamento'].setValue(this.Habitaciones[i].Departamento)
+    this.HabitacionForm.controls['Municipio'].setValue(this.Habitaciones[i].Ciudad)
+    this.HabitacionForm.controls['Direccion'].setValue(this.Habitaciones[i].Direccion)
+    this.HabitacionForm.controls['Imagen'].setValue(this.Habitaciones[i].Imagen)
+    this.HabitacionForm.controls['Disponibilidad'].setValue(this.Habitaciones[i].Disponibilidad)
+    this.HabitacionForm.controls['Costo'].setValue(this.Habitaciones[i].Precio)
+    this.HabitacionForm.controls['Descripcion'].setValue(this.Habitaciones[i].Descripcion)
+
+    this.HabilitarAct = true
+
+    
+  }
+
+  Actualizar(){
+    this.HabilitarAct = false
+    this.HabitacionForm.reset()
+  }
 
   
 }

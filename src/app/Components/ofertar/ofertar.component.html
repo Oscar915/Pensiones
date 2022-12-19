@@ -110,6 +110,8 @@
 
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
+            &nbsp;
+            <button class="btn btn-primary" (click)="Actualizar()" *ngIf="HabilitarAct">Actualizar</button>
         </form>
     </div>
 
@@ -128,13 +130,13 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                <tr *ngFor="let Elem of Habitaciones">
+                <tr *ngFor="let Elem of Habitaciones let i = index">
                     <td>{{Elem.Nombres}}</td>
                     <td>{{Elem.Departamento}}</td>
                     <td>{{Elem.Ciudad}}</td>
                     <td>{{Elem.Direccion}}</td>
                     <td>{{Elem.Disponibilidad}}</td>
-                    <td><button class="btn btn-primary">Editar</button></td>
+                    <td><button class="btn btn-primary" (click)="Editar(i)">Editar</button></td>
                     <!--<td><button class="btn btn-danger">Eliminar</button></td>-->
                 </tr>
             </tbody>
