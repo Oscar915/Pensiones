@@ -51,7 +51,7 @@ export class OfertarComponent implements OnInit {
   }
 
   Ejecutar(){
-    //console.log(this.HabitacionForm.value);
+    console.log(this.HabitacionForm.value);
     let Hab = this.HabitacionForm.value;
 
     let Habitacion:Habitacion={
@@ -61,14 +61,19 @@ export class OfertarComponent implements OnInit {
     Precio:Hab.Costo,
     Imagen:Hab.Imagen,
     Departamento:Hab.Departamento,
-    Ciudad:Hab.Ciudad,
+    Ciudad:Hab.Municipio,
     Direccion:Hab.Direccion,
     Id_administrador: +sessionStorage.getItem('Id')!
     }
 
     console.log(Habitacion);
-    
-    
+
+    this._DataService.setHabitacion(Habitacion)
+    .subscribe( 
+    Resp => {alert(Resp)},
+    Err => console.log(Err))
+
+    this.HabitacionForm.reset()
 
   }
 

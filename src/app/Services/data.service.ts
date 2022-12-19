@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Arrendador } from '../models/Arrendador';
 import { Estudiante } from '../models/Estudiante';
+import { Habitacion } from '../models/Habitacion';
 
 
 
@@ -55,9 +56,14 @@ public getHabitaciones():Observable<any>{
 public desactivarArrendador(Id:number):Observable<any>{
   return this._HttpClient.put('http://localhost:3000/api/desactivararrendador',{Id});
 }
-
+/************************************************************************************************* */
 public activarArrendador(Id:number):Observable<any>{
   return this._HttpClient.put('http://localhost:3000/api/activararrendador',{Id});
+}
+/************************************************************************************************* */
+
+public setHabitacion(Habitacion:Habitacion):Observable<any>{
+  return this._HttpClient.post('http://localhost:3000/api/habitacion/' , Habitacion);
 }
 
 }
