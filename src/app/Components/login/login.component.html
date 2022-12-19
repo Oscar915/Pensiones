@@ -11,9 +11,9 @@
                         
                     </p>
 
-                    <form > 
+                    <form [formGroup]="LoginForm" (ngSubmit)="Ejecutar()" > 
 
-                            <input class="form-control" type="email" name="Email" placeholder="Correo" formControlName="user">
+                        <input class="form-control" type="email" name="Email" placeholder="Correo" formControlName="user">
        
                             <input class="form-control mt-2" type="password" name="password" placeholder="Contraseña" formControlName="password">
                         <br> <br>
@@ -21,7 +21,7 @@
                             Acceder
                         </button>
                         &nbsp; 
-                        <button class="button">
+                        <button class="button" (click)="Registrar()">
                             REGISTRAR USUARIO
                         </button>
 
@@ -36,6 +36,7 @@
                     </div>
                 </div>
             </div>
+            <br>
         </section>
 
 

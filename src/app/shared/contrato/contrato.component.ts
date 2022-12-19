@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { data } from 'src/app/models/data';
 import { Estudiante } from 'src/app/models/Estudiante';
 import {NgPrintModule} from 'ng-print';
 

@@ -15,9 +15,9 @@ import { ReservasEstudiantesComponent } from './Components/reservas-estudiantes/
 
 const routes: Routes = [
   {path:"" , component: LoginComponent},
-  {path:"Home" , component:HomeComponent},
   {path:"Login" , component:LoginComponent},
   {path:"Registrar" , component:RegistroComponent},
+  {path:"Home" , component:HomeComponent},
   {path:"House" , component:HouseComponent},
   {path:"Alojamiento" , component:AlojamientosComponent},
   {path:"create/:id" , component: CreateComponent},
