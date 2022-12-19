@@ -92,8 +92,8 @@
                 <td>{{arrendador.Apellidos}}</td>
                 <td>{{arrendador.Estado}}</td>
                 <td>
-                    <button *ngIf="arrendador.Estado=='Activo'"  (click)="desactivar(arrendador.Id)" class="btn btn-danger" >Desactivar</button>
-                    <button *ngIf="arrendador.Estado!='Activo'" (click)="activar(arrendador.Id)" class="btn btn-success" >Activar</button>
+                    <button *ngIf="arrendador.Estado=='Activo'"  (click)="desactivar(arrendador.Id!)" class="btn btn-danger" >Desactivar</button>
+                    <button *ngIf="arrendador.Estado!='Activo'" (click)="activar(arrendador.Id!)" class="btn btn-success" >Activar</button>
                 </td>
               </tr>
             
