@@ -98,100 +98,20 @@
                         </div>
                     </div>
                 </form>
-                <div class="swiper-wrapper d-flex">
+                <div  class="row d-flex">
 
-                    <article class="popular__card swiper-slide">
+                    <article *ngFor="let habi of habitaciones" class="popular__card swiper-slide">
                         <img src="../../../assets/img/popular1.jpg" alt="" class="popular__img">
 
                         <div class="popular__data">
                             <h2 class="popular__price">
-                                <span>$</span>555,000
+                                <span>$</span>{{habi.Precio}}
                             </h2>
                             <h3 class="popular__title">
-                                Montería, Córdoba
+                                {{habi.Ciudad}}, {{habi.Departamento}}
                             </h3>
                             <p class="popular__description">
-                                Barrio Mocari,
-                                Cra. 2 #45 - 775
-                            </p>
-                            <button Class="button col-6">Ver</button>
-                        </div>
-                    </article>
-
-                    <article class="popular__card swiper-slide">
-                        <img src="../../../assets/img/p10.jpg" alt="" class="popular__img">
-
-                        <div class="popular__data">
-                            <h2 class="popular__price">
-                                <span>$</span>430,000
-                            </h2>
-                            <h3 class="popular__title">
-                                Lorica, Córdoba
-                            </h3>
-                            <p class="popular__description">
-                                Parque Barrio Villa Juana,
-                                Cra. 21 #10 - 452
-                            </p>
-                            <button Class="button col-6">Ver</button>
-
-                        </div>
-                    </article>
-
-                    <article class="popular__card swiper-slide">
-                        <img src="../../../assets/img/popular2.jpg" alt="" class="popular__img">
-
-                        <div class="popular__data">
-                            <h2 class="popular__price">
-                                <span>$</span>490,000
-                            </h2>
-                            <h3 class="popular__title">
-                                Lorica, Córdoba
-                            </h3>
-                            <p class="popular__description">
-                                Estadio de Béisbol 3 de Mayo,
-                                Cl. 19 #29 - 290
-                            </p>
-                            <button Class="button col-6">Ver</button>
-                        </div>
-                    </article>
-
-
-                </div>
-
-                <div class="swiper-wrapper mt-3 d-flex">
-
-
-                    <article class="popular__card swiper-slide">
-                        <img src="../../../assets/img/p20.jpg" alt="" class="popular__img">
-
-                        <div class="popular__data">
-                            <h2 class="popular__price">
-                                <span>$</span>540,000
-                            </h2>
-                            <h3 class="popular__title">
-                                Montería, Córdoba
-                            </h3>
-                            <p class="popular__description">
-                                Barrio Mocari,
-                                Cra. 7 #467 - 210
-                            </p>
-                            <button Class="button col-6">Ver</button>
-                        </div>
-                    </article>
-
-                    <article class="popular__card swiper-slide">
-                        <img src="../../../assets/img/p30.png" alt="" class="popular__img">
-
-                        <div class="popular__data">
-                            <h2 class="popular__price">
-                                <span>$</span>480,000
-                            </h2>
-                            <h3 class="popular__title">
-                                Lorica, Córdoba
-                            </h3>
-                            <p class="popular__description">
-                                Calle IE Lacides C. Bersal,
-                                Cra. 27 #10 - 101
+                               {{habi.Direccion}}
                             </p>
                             <button Class="button col-6">Ver</button>
                         </div>
