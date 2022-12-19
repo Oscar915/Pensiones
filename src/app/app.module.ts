@@ -23,6 +23,8 @@ import { ContratoComponent } from './shared/contrato/contrato.component';
 import { DetalleComponent } from './Components/detalle/detalle.component';
 import { PagoComponent } from './shared/pago/pago.component';
 import { TarjetaComponent } from './shared/tarjeta/tarjeta.component';
+import { AdminHomeComponent } from './Components/admin/admin-home/admin-home.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { TarjetaComponent } from './shared/tarjeta/tarjeta.component';
     ContratoComponent,
     DetalleComponent,
     PagoComponent,
-    TarjetaComponent
+    TarjetaComponent,
+    AdminHomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
