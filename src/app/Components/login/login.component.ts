@@ -64,6 +64,7 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem('User' , Elem.Correo)
           sessionStorage.setItem('Pass' , Elem.Contraseña)
           sessionStorage.setItem('Nombre' , Elem.Nombres)
+          sessionStorage.setItem('Id' , ""+Elem.Id)
           this._Router.navigate(["Ofertar"])
         }
       })

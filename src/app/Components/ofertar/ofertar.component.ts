@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Habitacion } from 'src/app/models/Habitacion';
 import { DataService } from 'src/app/Services/data.service';
@@ -13,11 +14,28 @@ export class OfertarComponent implements OnInit {
     
   Nombre:string;
 
+  HabitacionForm:FormGroup;
+
+
+
   Habitaciones:Habitacion[];
-  constructor(private _Router:Router, private _DataService:DataService) {
+  constructor(private _Router:Router, 
+    private _DataService:DataService,  
+    private _formBuilder: FormBuilder) {
 
     this.Nombre = ""+sessionStorage.getItem('Nombre')
     this.Habitaciones=[]
+
+    this.HabitacionForm = this._formBuilder.group({
+      Nombre: ['', Validators.required],
+      Departamento:['', Validators.required],
+      Municipio:['', Validators.required],
+      Direccion:['', Validators.required],
+      Imagen:['', Validators.required],
+      Disponibilidad:['', Validators.required],
+      Costo:['',Validators.required],
+      Descripcion:['', Validators.required]
+    })
 
      }
 
@@ -29,6 +47,28 @@ export class OfertarComponent implements OnInit {
     },
       Err => console.log(Err))
 
+
+  }
+
+  Ejecutar(){
+    //console.log(this.HabitacionForm.value);
+    let Hab = this.HabitacionForm.value;
+
+    let Habitacion:Habitacion={
+    Nombres: Hab.Nombre,
+    Disponibilidad:Hab.Disponibilidad,
+    Descripcion:Hab.Descripcion,
+    Precio:Hab.Costo,
+    Imagen:Hab.Imagen,
+    Departamento:Hab.Departamento,
+    Ciudad:Hab.Ciudad,
+    Direccion:Hab.Direccion,
+    Id_administrador: +sessionStorage.getItem('Id')!
+    }
+
+    console.log(Habitacion);
+    
+    
 
   }
 

@@ -41,32 +41,32 @@
 
 <div class="container mt-5 p-1">
     <div class="mt-5">
-        <form class="mt-5">
+        <form class="mt-5" [formGroup]="HabitacionForm" (ngSubmit)="Ejecutar()">
             <h4 class="mt-5">Agregar nueva habitación</h4>
 
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="Nombre">
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Departamento</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="Departamento">
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Municipio</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="Municipio">
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="Direccion">
                     </div>
                 </div>
             </div>
@@ -74,23 +74,23 @@
                 <div class="col-3">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">URL imagen</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="Imagen">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Estado</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" aria-label="Default select example" formControlName="Disponibilidad">
                             <option selected>...</option>
-                            <option value="1">Libre</option>
-                            <option value="2">Ocupado</option>
+                            <option value="Libre">Libre</option>
+                            <option value="Ocupado">Ocupado</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Costo</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="Costo">
                     </div>
                 </div>
 
@@ -101,7 +101,7 @@
                     <div class="mb-3">
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here"
-                                id="floatingTextarea"></textarea>
+                                id="floatingTextarea" formControlName="Descripcion"></textarea>
                             <label for="floatingTextarea">Descripción</label>
                         </div>
                     </div>
