@@ -70,7 +70,9 @@ public traerReservas():Observable<any>{
   return this._HttpClient.get('http://localhost:3000/api/reserva');
 }
 
-
+public getHabitacionesLibres():Observable<any>{
+  return this._HttpClient.get('http://localhost:3000/api/habilibres');
+}
 
 }
 
